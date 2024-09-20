@@ -20,6 +20,7 @@ const Home = () => {
 
   return (
     <div>
+      <h2>Welcome! {authedUser}</h2>
       <h3 className="center">Your Polls</h3>
       <div className="center">
         <button onClick={() => setShowAnswered(false)} className={showAnswered ? '' : 'active'}>

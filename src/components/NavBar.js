@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 
 const NavBar = () => {
+
+  
   return (
     <nav>
       <ul>
@@ -13,6 +15,9 @@ const NavBar = () => {
         <li>
           <Link to="/add">Create Poll</Link>
         </li>
+        <div>
+          name
+        </div>
       </ul>
     </nav>
   );

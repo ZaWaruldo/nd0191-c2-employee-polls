@@ -6,6 +6,7 @@ import PrivateRoute from './components/PrivateRoute';
 import PollDetails from './components/PollDetails';
 import NewPoll from './components/NewPoll';
 import Leaderboard from './components/Leaderboard';
+import Page404 from './components/Page404';
 
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
@@ -36,46 +37,19 @@ const App = () => {
         <Routes>
           {/* Login Route */}
           <Route path="/login" element={<Login />} />
-          
+
           {/* Home Route Protected by PrivateRoute */}
-          <Route
-            path="/"
-            element={
-              <PrivateRoute>
-                <Home />
-              </PrivateRoute>
-            }
-          />
+          <Route path="/" element={<PrivateRoute><Home /></PrivateRoute>} />
 
           {/* Poll Details Protected */}
-          <Route
-            path="/questions/:question_id"
-            element={
-              <PrivateRoute>
-                <PollDetails />
-              </PrivateRoute>
-            }
-          />
+          <Route path="/questions/:question_id" element={<PrivateRoute><PollDetails /></PrivateRoute>} />
 
           {/* New Poll Protected */}
-          <Route
-            path="/add"
-            element={
-              <PrivateRoute>
-                <NewPoll />
-              </PrivateRoute>
-            }
-          />
+          <Route path="/add" element={<PrivateRoute><NewPoll /></PrivateRoute>} />
 
           {/* Leaderboard Protected */}
-          <Route
-            path="/leaderboard"
-            element={
-              <PrivateRoute>
-                <Leaderboard />
-              </PrivateRoute>
-            }
-          />
+          <Route path="/leaderboard" element={<PrivateRoute><Leaderboard /></PrivateRoute>} />
+          <Route path="*" element={<Page404 />} />
         </Routes>
       </div>
     </Router>

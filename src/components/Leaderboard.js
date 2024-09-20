@@ -2,6 +2,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 
+
 const Leaderboard = () => {
   const users = useSelector((state) => state.users);
 
@@ -17,12 +18,25 @@ const Leaderboard = () => {
     .sort((a, b) => b.score - a.score); // Sort by score in descending order
 
   return (
+
     <div>
       <h3>Leaderboard</h3>
+      <table>
+        <tr>
+          <th>Employee</th>
+          <th>Questions Created</th>
+          <th>Questions Answered</th>
+          <th>Total Score</th>
+        </tr>
+      </table>
+
+
+
       <ul>
         {leaderboard.map((user) => (
           <li key={user.id}>
             <div>
+              <img src={user.avatarURL} alt='' height="100"/>
               <div>{user.name}</div>
               <div>Questions Created: {user.questionsCreated}</div>
               <div>Questions Answered: {user.questionsAnswered}</div>
