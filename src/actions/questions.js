@@ -23,7 +23,7 @@ export function saveQuestionAnswer({ authedUser, qid, answer }) {
         qid,
         answer,
       });
-      dispatch(receiveUsers()); // Optionally update users if needed
+      dispatch(receiveUsers());
     });
   };
 }

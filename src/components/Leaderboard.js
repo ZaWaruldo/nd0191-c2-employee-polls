@@ -23,11 +23,6 @@ const Leaderboard = () => {
         {leaderboard.map((user) => (
           <li key={user.id}>
             <div>
-              <img
-                src={user.avatarURL}
-                alt={`Avatar of ${user.name}`}
-                className="avatar"
-              />
               <div>{user.name}</div>
               <div>Questions Created: {user.questionsCreated}</div>
               <div>Questions Answered: {user.questionsAnswered}</div>
