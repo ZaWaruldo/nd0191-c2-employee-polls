@@ -31,6 +31,7 @@ const NewPoll = () => {
   return (
     <div>
       <h3>Create a New Poll</h3>
+      <h4>Would you Rather...</h4>
       <form onSubmit={handleSubmit}>
         <label>
           Option One:
