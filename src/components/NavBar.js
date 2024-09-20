@@ -1,4 +1,3 @@
-// Example of a simple NavBar component
 import { Link } from 'react-router-dom';
 
 const NavBar = () => {
