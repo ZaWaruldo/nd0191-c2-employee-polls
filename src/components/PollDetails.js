@@ -3,6 +3,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { saveQuestionAnswer } from '../actions/questions';
+import NotFound from './NotFound';
 
 const PollDetails = () => {
   const { question_id } = useParams();
@@ -11,7 +12,7 @@ const PollDetails = () => {
   const users = useSelector((state) => state.users);
   const dispatch = useDispatch();
 
-  if (!question) { return <p>This poll doesn't exist!</p>; }
+  if (!question) { return <NotFound />; }
 
   const hasAnswered = users[authedUser].answers.hasOwnProperty(question.id);
   const totalVotes = question.optionOne.votes.length + question.optionTwo.votes.length;

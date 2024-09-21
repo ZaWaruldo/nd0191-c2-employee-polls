@@ -37,19 +37,3 @@
   }
 }
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
-.poll-option {
-  padding: 10px;
-  margin-bottom: 10px;
-  background-color: #f5f5f5;
-  border-radius: 5px;
-}
-
-.poll-option.selected {
-  background-color: #d4edda;
-  border: 2px solid #28a745;
-}

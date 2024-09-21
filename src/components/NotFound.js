@@ -5,7 +5,7 @@ const NotFound = () => {
   return (
     <div>
       <h2>404 - Poll Not Found</h2>
-      <p>Sorry, the poll you're looking for does not exist.</p>
+      <p>Sorry, the poll does not exist.</p>
     </div>
   );
 };

@@ -16,6 +16,8 @@ import { _getUsers, _getQuestions } from './_DATA';
 
 import NavBar from './components/NavBar';
 
+import './index.css';
+
 const App = () => {
   const authedUser = useSelector((state) => state.authedUser);
 
@@ -49,6 +51,8 @@ const App = () => {
 
           {/* Leaderboard Protected */}
           <Route path="/leaderboard" element={<PrivateRoute><Leaderboard /></PrivateRoute>} />
+
+          {/* Catch-all route for 404 */}
           <Route path="*" element={<Page404 />} />
         </Routes>
       </div>
