@@ -21,15 +21,6 @@ const Leaderboard = () => {
 
     <div>
       <h3>Leaderboard</h3>
-      <table>
-        <tr>
-          <th>Employee</th>
-          <th>Questions Created</th>
-          <th>Questions Answered</th>
-          <th>Total Score</th>
-        </tr>
-      </table>
-
 
 
       <ul>
