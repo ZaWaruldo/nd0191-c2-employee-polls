@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
+import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 
-import '../index.css';
+import "../index.css";
 
 const NavBar = ({ authedUser, users }) => {
   const loggedInUser = users[authedUser];
@@ -19,7 +19,7 @@ const NavBar = ({ authedUser, users }) => {
           <Link to="/add">Create Poll</Link>
         </li>
         <li className="navbar-user">
-          {loggedInUser ? `Hello, ${loggedInUser.name}` : 'Guest'}
+          {loggedInUser ? `Hello, ${loggedInUser.name}` : "Guest"}
         </li>
       </ul>
     </nav>
