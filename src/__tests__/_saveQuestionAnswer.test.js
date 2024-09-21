@@ -1,20 +1,19 @@
-import { _saveQuestionAnswer } from '../_DATA';
+import { _saveQuestionAnswer } from './_DATA';
 
 describe('_saveQuestionAnswer', () => {
-  it('should return true when correctly formatted data is passed', async () => {
-    const answer = {
+  it('should return true when correct data is passed', async () => {
+    const answerData = {
       authedUser: 'user1',
-      qid: 'question1',
-      answer: 'optionOne'
+      qid: 'question_id',
+      answer: 'optionOne',
     };
 
-    const result = await _saveQuestionAnswer(answer);
+    const result = await _saveQuestionAnswer(answerData);
     expect(result).toBe(true);
   });
 
   it('should throw an error if incorrect data is passed', async () => {
-    const badData = {};
-
-    await expect(_saveQuestionAnswer(badData)).rejects.toEqual('Please provide authedUser, qid, and answer');
+    const answerData = { authedUser: 'user1', answer: 'optionOne' }; // Missing qid
+    await expect(_saveQuestionAnswer(answerData)).rejects.toEqual('Please provide authedUser, qid, and answer');
   });
 });

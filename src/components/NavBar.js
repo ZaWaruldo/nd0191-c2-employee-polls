@@ -1,11 +1,14 @@
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 
-const NavBar = () => {
+import '../index.css';
 
-  
+const NavBar = ({ authedUser, users }) => {
+  const loggedInUser = users[authedUser];
+
   return (
-    <nav>
-      <ul>
+    <nav className="navbar">
+      <ul className="navbar-list">
         <li>
           <Link to="/">Home</Link>
         </li>
@@ -15,12 +18,17 @@ const NavBar = () => {
         <li>
           <Link to="/add">Create Poll</Link>
         </li>
-        <div>
-          name
-        </div>
+        <li className="navbar-user">
+          {loggedInUser ? `Hello, ${loggedInUser.name}` : 'Guest'}
+        </li>
       </ul>
     </nav>
   );
 };
 
-export default NavBar;
+const mapStateToProps = ({ authedUser, users }) => ({
+  authedUser,
+  users,
+});
+
+export default connect(mapStateToProps)(NavBar);

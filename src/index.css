@@ -76,3 +76,39 @@ button:hover {
   background-color: #d4edda;
   border: 2px solid #28a745;
 }
+/* NavBar.css */
+
+.navbar {
+  background-color: #333;
+  padding: 1rem;
+  color: white;
+}
+
+.navbar-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-list li {
+  margin-right: 20px;
+}
+
+.navbar-list li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.navbar-list li a:hover {
+  text-decoration: underline;
+}
+
+.navbar-user {
+  margin-left: auto;
+  font-size: 1rem;
+  font-weight: bold;
+}
